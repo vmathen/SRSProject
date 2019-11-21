@@ -3,10 +3,10 @@
 
 2. create a AMI using Packer and include the Playbook to run locally. save the image in AWS AMI
 
-3. Launch the Instance using instlaunchconfig.tf file  in default vpc.
+3. Launch the Instance using saved AMI with  instlaunchconfig.tf file  in  vpc.
 
 
-covers below items as applicable:
+items to cover:
 
 - Inventory
 
