@@ -1,0 +1,24 @@
+
+---
+- hosts: localhost
+  connection: local
+  tasks:
+        - name:  handling the error
+          block:
+                  - name: simulate long running op, allow to run for 45 sec, fire and forget
+                    command: sleep 15
+                    async: 45
+                    poll: 0
+                  - name: httpd install       
+                    yum:
+                         name: httpd
+                         state: latest
+                    become: true
+                  - name: ensure apache is running
+                    service:
+                         name: httpd
+                         state: started        
+                    become: true
+          rescue:
+                  - debug:
+                          msg: 'I caught in an error'  
