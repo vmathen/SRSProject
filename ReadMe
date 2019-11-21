@@ -1,0 +1,31 @@
+
+1. Created a VPC and Subnet A  with main.tf 
+
+2. create a AMI using Packer and include the Playbook to run locally. save the image in AWS AMI
+
+3. Launch the Instance using instlaunchconfig.tf file  in default vpc.
+
+
+covers below items as applicable:
+
+- Inventory
+
+- Patterns                          # Not covered
+
+- Configuration 
+
+- Playbooks 
+
+- Modules 
+
+- Encrypting Files                   # ansible-vault is not covered  
+
+- Vault                              # ansible-vault is not covered
+
+- Debugging
+
+- Polling & Asynchronous Actions
+
+- Error Handling - done
+
+- Validations
